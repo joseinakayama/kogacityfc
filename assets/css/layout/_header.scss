@@ -1,0 +1,223 @@
+@use "../setting/mixins" as *;
+
+.l-header {
+  position: relative;
+  background: var(--monoBlack);
+  color: var(--monoWhite);
+  border-bottom: 10px solid var(--primary);
+  height: 100px;
+  z-index: 9000;
+  &__inner {
+    display: flex;
+    gap: 100px;
+    padding: 0 30px;
+    height: 100%;
+    position: relative;
+    @media screen and (max-width: 1100px) {
+      gap: 40px;
+    }
+  }
+}
+
+.l-header-logo {
+  width: 126px;
+  min-width: 126px;
+  a {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.l-nav {
+  position: relative;
+  display: flex;
+  height: 100%;
+  @include notPc() {
+    display: none;
+  }
+}
+
+.l-nav-list {
+  display: flex;
+  gap: 30px;
+  &__item {
+    display: flex;
+    position: relative;
+    & > a {
+      display: flex;
+      align-items: center;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 0;
+        height: 10px;
+        background: var(--accent);
+        @include transitionAll();
+      }
+      &:hover {
+        @include hover();
+        @include transitionAll();
+        &:after {
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.l-nav-sub {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 140px;
+  padding: 20px 10px;
+  background: rgba(0, 0, 0, 0.9);
+  @include transitionAll();
+  &.is-active-nav-sub-open {
+    visibility: visible;
+    opacity: 1;
+    @include transitionAll();
+  }
+  &__item {
+    & + .l-nav-sub__item {
+      margin-top: 15px;
+    }
+  }
+}
+
+.l-hamburger {
+  display: none;
+  @include notPc() {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    cursor: pointer;
+    &__border {
+      display: inline-block;
+      position: absolute;
+      left: 14px;
+      width: 45%;
+      height: 3px;
+      background: var(--monoWhite);
+      @include transitionAll();
+      &:nth-of-type(1) {
+        top: 15px;
+      }
+      &:nth-of-type(2) {
+        top: 23px;
+      }
+      &:nth-of-type(3) {
+        top: 31px;
+      }
+    }
+    &.is-active-hamburger-open {
+      .l-hamburger__border {
+        &:nth-of-type(1) {
+          top: 18px;
+          left: 18px;
+          transform: translateY(6px) rotate(-45deg);
+        }
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+        &:nth-of-type(3) {
+          top: 30px;
+          left: 18px;
+          transform: translateY(-6px) rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
+.l-menu {
+  display: none;
+  @include notPc() {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+    background: var(--monoBlack);
+    z-index: 8000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    visibility: hidden;
+    opacity: 0;
+    @include transitionAll();
+    &.is-active-menu-open {
+      visibility: visible;
+      opacity: 1;
+    }
+    &__inner {
+      display: flex;
+      gap: 50px;
+    }
+  }
+}
+
+.l-menu-list {
+  font-size: var(--large-fontSize);
+  @include onlySp() {
+    font-size: var(--medium-fontSize);
+  }
+  &__item {
+    & + .l-menu-list__item {
+      margin-top: 30px;
+    }
+  }
+}
+
+.l-menu-sub {
+  padding-left: 10px;
+  margin-top: 20px;
+  &__item {
+    opacity: 0.5;
+    & + .l-menu-sub__item {
+      margin-top: 20px;
+    }
+  }
+}
+
+.l-main {
+  background: var(--monoBlack);
+  color: var(--monoWhite);
+}
+
+.l-main-under {
+  background: var(--monoWhite);
+  color: var(--monoBlack);
+}
+
+.l-main-under-gray {
+  background: var(--gray);
+  color: var(--monoBlack);
+}
+
+.l-menu-sns {
+  .c-list-sns {
+    display: flex;
+    justify-content: center;
+    &__item {
+      margin-bottom: 0;
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

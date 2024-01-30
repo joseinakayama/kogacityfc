@@ -1,0 +1,11 @@
+.p-section-partner {
+  margin-bottom: 70px;
+}
+
+.p-list-support-partner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 910px;
+  margin: 0 auto;
+}

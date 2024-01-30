@@ -1,0 +1,122 @@
+@charset "UTF-8";
+.p-section-about {
+  margin-bottom: 30px;
+}
+
+.p-container-about-ico {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+@media screen and (max-width: 640px) {
+  .p-container-about-ico {
+    display: block;
+  }
+}
+.p-container-about-ico__item {
+  width: 280px;
+  text-align: center;
+}
+@media screen and (max-width: 640px) {
+  .p-container-about-ico__item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+.p-container-about-ico__item dt {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 640px) {
+  .p-container-about-ico__item dd {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+.p-container-about-ico__item dd.p-disc-aboutーemb {
+  margin-top: 20px;
+  line-height: 1.75;
+}
+@media screen and (max-width: 640px) {
+  .p-container-about-ico__item dd.p-disc-aboutーemb {
+    width: 100%;
+  }
+}
+
+.p-label-about {
+  text-align: center;
+  padding: 10px 0;
+  background: var(--bg100);
+  color: var(--monoWhite);
+  display: inline-block;
+  width: 200px;
+}
+
+.p-disc-aboutーemb {
+  margin-top: 20px;
+  line-height: 1.75;
+}
+@media screen and (max-width: 640px) {
+  .p-disc-aboutーemb {
+    width: 100%;
+  }
+}
+
+.p-container-about-uniform {
+  margin: 40px 0;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 40px;
+}
+.p-container-about-uniform__item {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 30px;
+  justify-items: center;
+}
+
+.p-container-about-club-list table {
+  width: 600px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 640px) {
+  .p-container-about-club-list table {
+    width: 100%;
+  }
+}
+.p-container-about-club-list table tr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 1px solid #e6e5e5;
+  border-bottom: none;
+}
+@media screen and (max-width: 640px) {
+  .p-container-about-club-list table tr {
+    display: block;
+  }
+}
+.p-container-about-club-list table tr:last-child {
+  border-bottom: 1px solid #e6e5e5;
+}
+.p-container-about-club-list table tr th {
+  width: 30%;
+}
+@media screen and (max-width: 640px) {
+  .p-container-about-club-list table tr th {
+    width: 100%;
+  }
+}
+.p-container-about-club-list table tr td {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  border-left: none;
+  padding: 10px;
+}
+@media screen and (max-width: 640px) {
+  .p-container-about-club-list table tr td {
+    width: 100%;
+    display: block;
+  }
+}

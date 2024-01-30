@@ -1,0 +1,109 @@
+@use "../../../assets/css/setting/mixins" as *;
+
+.p-section-about {
+  margin-bottom: 30px;
+}
+
+.p-container-about-ico {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  @include onlySp {
+    display: block;
+  }
+  &__item {
+    width: 280px;
+    text-align: center;
+    @include onlySp {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    dt {
+      margin-bottom: 30px;
+    }
+    dd {
+      @include onlySp {
+        width: 80%;
+        margin: 0 auto;
+      }
+      &.p-disc-aboutーemb {
+        margin-top: 20px;
+        line-height: 1.75;
+        @include onlySp {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.p-label-about {
+  text-align: center;
+  padding: 10px 0;
+  background: var(--bg100);
+  color: var(--monoWhite);
+  display: inline-block;
+  width: 200px;
+}
+
+.p-disc-aboutーemb {
+  margin-top: 20px;
+  line-height: 1.75;
+  @include onlySp {
+    width: 100%;
+  }
+}
+
+.p-container-about-uniform {
+  margin: 40px 0;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 40px;
+  &__item {
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 30px;
+    justify-items: center;
+  }
+}
+
+.p-container-about-club-list {
+  table {
+    width: 600px;
+    margin: 0 auto;
+    @include onlySp {
+      width: 100%;
+    }
+    tr {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border: 1px solid #e6e5e5;
+      border-bottom: none;
+      @include onlySp {
+        display: block;
+      }
+      &:last-child {
+        border-bottom: 1px solid #e6e5e5;
+      }
+      th {
+        width: 30%;
+        @include onlySp {
+          width: 100%;
+        }
+      }
+      td {
+        width: 70%;
+        display: flex;
+        align-items: center;
+        border-left: none;
+        padding: 10px;
+        @include onlySp {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+}

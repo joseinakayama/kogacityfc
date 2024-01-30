@@ -1,0 +1,77 @@
+// Mixin管理用
+
+// PC専用
+@mixin onlyPc() {
+  @media screen and (min-width: 1000px) {
+    @content;
+  }
+}
+
+// PCを除いたデバイス
+@mixin notPc() {
+  @media screen and (max-width: 999px) {
+    @content;
+  }
+}
+
+// SPを除いたデバイス
+@mixin notSp() {
+  @media screen and (min-width: 641px) {
+    @content;
+  }
+}
+
+// タブレット専用
+@mixin onlyTab() {
+  @media screen and (min-width: 641px) and (max-width: 999px) {
+    @content;
+  }
+}
+
+// SP専用
+@mixin onlySp() {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+// SPを除いたデバイス
+@mixin notSp() {
+  @media screen and (min-width: 641px) {
+    @content;
+  }
+}
+
+// 低解像度SP
+@mixin lowSp() {
+  @media screen and (max-width: 360px) {
+    @content;
+  }
+}
+
+// オーバーレイ汎用
+@mixin baseOverlay($zindexNum: 7000) {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: $zindexNum;
+  transition: ease 0.3s;
+}
+
+@mixin landscape() {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin hover() {
+  opacity: 0.8;
+}
+
+@mixin transitionAll() {
+  transition: all 0.3s ease-in-out;
+}

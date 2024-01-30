@@ -1,0 +1,29 @@
+.p-container-match {
+  background: var(--gray);
+  color: var(--monoBlack);
+  padding: 30px;
+  border-radius: 5px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 640px) {
+  .p-container-match {
+    padding: 15px;
+  }
+}
+
+.c-wrap-match-result span {
+  background: var(--monoWhite);
+}
+.c-wrap-match-result span.win {
+  color: #ff0100;
+}
+
+.p-title-match-name {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}

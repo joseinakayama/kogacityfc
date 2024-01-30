@@ -1,0 +1,11 @@
+// 変数
+@use "setting" as *;
+
+// リセット・ベーススタイル読み込み
+@use "foundation" as *;
+
+// レイアウト読み込み
+@use "layout" as *;
+
+// コンポーネント読み込み
+@use "component" as *;

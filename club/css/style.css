@@ -1,0 +1,85 @@
+.c-section {
+  padding: 0;
+}
+
+.p-section-club {
+  padding: 20px 0;
+  background-color: var(--monoBlack);
+  background: url(/assets/img/img_club_bg.jpg) no-repeat center center;
+  background-size: cover;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.p-mv-club {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.p-title-club {
+  font-size: 70px;
+  letter-spacing: 10px;
+  font-weight: bold;
+  text-align: center;
+  padding: 50px 0;
+  position: relative;
+  color: var(--primary);
+}
+@media screen and (max-width: 640px) {
+  .p-title-club {
+    font-size: 26px;
+    padding: 30px 0;
+  }
+}
+
+.p-container-club-textwrap {
+  max-width: 840px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 640px) {
+  .p-container-club-textwrap {
+    padding: 0 20px;
+  }
+}
+
+.p-text-club {
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
+.p-text-club-philosophy {
+  font-size: 24px;
+  letter-spacing: 10px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 640px) {
+  .p-text-club-philosophy {
+    font-size: 18px;
+  }
+}
+
+.p-container-club-imgwrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  max-width: 840px;
+  margin: 0 auto 30px;
+}
+@media screen and (max-width: 640px) {
+  .p-container-club-imgwrap {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+  }
+}
+
+.p-img-club {
+  width: 50%;
+}
+@media screen and (max-width: 640px) {
+  .p-img-club {
+    width: 100%;
+  }
+}

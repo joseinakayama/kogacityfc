@@ -1,0 +1,37 @@
+.p-title-ranking-name {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.p-container-ranking-table {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.p-table-ranking {
+  width: 100%;
+  background: var(--primary);
+}
+.p-table-ranking tr {
+  border-bottom: 2px solid var(--monoWhite);
+}
+.p-table-ranking tr th,
+.p-table-ranking tr td {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+}
+@media screen and (max-width: 640px) {
+  .p-table-ranking tr th:nth-child(5), .p-table-ranking tr th:nth-child(6), .p-table-ranking tr th:nth-child(7),
+  .p-table-ranking tr td:nth-child(5),
+  .p-table-ranking tr td:nth-child(6),
+  .p-table-ranking tr td:nth-child(7) {
+    display: none;
+  }
+}
+.p-table-ranking tr td.p-table-ranking-myteam {
+  color: #ff0100;
+}

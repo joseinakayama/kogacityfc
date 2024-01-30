@@ -1,0 +1,40 @@
+@use "../../../assets/css/setting/mixins" as *;
+
+.p-title-ranking-name {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.p-container-ranking-table {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.p-table-ranking {
+  width: 100%;
+  background: var(--primary);
+  tr {
+    border-bottom: 2px solid var(--monoWhite);
+    th,
+    td {
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      vertical-align: middle;
+      @include onlySp {
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7) {
+          display: none;
+        }
+      }
+    }
+    td {
+      &.p-table-ranking-myteam {
+        color: #ff0100;
+      }
+    }
+  }
+}

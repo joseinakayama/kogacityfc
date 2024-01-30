@@ -1,0 +1,22 @@
+.p-main-visual {
+  width: 100%;
+  max-width: 1920px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto;
+}
+
+.p-container-movie {
+  width: 60%;
+  margin: 0 auto;
+  aspect-ratio: 16/9;
+}
+@media screen and (max-width: 640px) {
+  .p-container-movie {
+    width: 100%;
+  }
+}
+.p-container-movie iframe {
+  width: 100%;
+  height: 100%;
+}
